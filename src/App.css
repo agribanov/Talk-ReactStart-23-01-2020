@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+html,
+body,
+#root,
+.App,
+.cubes {
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cubes {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cubes-header {
+    height: 100px;
+    /* background-color: blue; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cubes-header .avatar {
+    float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.cubes-field {
+    height: calc(100% - 100px);
+    border: 1px solid red;
+    position: relative;
+    background: url('./bg.png');
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cube-container {
+    position: absolute;
+}
+
+.cube-container.selected {
+    border: 2px solid red;
+}
+
+.cube {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: url('./cubes.png');
+    background-size: 435px;
+}
+
+.cube.creeper {
+    background-position: 0 0;
+}
+
+.cube.zombie {
+    background-position: -112px 0;
 }
