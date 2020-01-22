@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+html,
+body,
+#root,
+.App,
+.cubes {
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cubes {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cubes-header {
+    height: 100px;
+    /* background-color: blue; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cubes-header .avatar {
+    float: left;
 }
 
-.App-link {
-  color: #61dafb;
+.cubes-header select,
+.cubes-header button {
+    -webkit-appearance: menulist-button;
+    /* height: 50px;
+    width: 150px; */
+    margin: 10px;
+    font-size: 36px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cubes-field {
+    height: calc(100% - 100px);
+    position: relative;
+    background: url('./bg.png');
+}
+
+.cube-container {
+    position: absolute;
+}
+
+.cube-container.selected {
+    border: 2px solid red;
+}
+
+.cube {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: url('./cubes.png');
+    background-size: 435px;
+}
+
+.cube.creeper {
+    background-position: 0 0;
+}
+
+.cube.zombie {
+    background-position: -112px 0;
+}
+
+.cube.enderman {
+    background-position: -224px 0;
+}
+
+.cube.skeleton {
+    background-position: -336px 0;
+}
+
+.cube.player {
+    background-position: 0 -112px;
+}
+
+.cube.citizen {
+    background-position: -112px -112px;
+}
+
+.cube.pig {
+    background-position: -224px -112px;
+}
+.cube.cow {
+    background-position: -336px -112px;
+}
+
+.cube.spider {
+    background-position: 0 -224px;
+}
+
+.cube.sheep {
+    background-position: -112px -224px;
+}
+
+.cube.dog {
+    background-position: -224px -224px;
 }
